@@ -1,3 +1,21 @@
+A sample project demonstrating a trailing ; Syntax error in
+[requirejs/requirejs#178](https://github.com/requirejs/requirejs/issues/178)
+
+In Node **v6.5.0** with `requirejs` installed globally, running this:
+
+    r.js -o tools/build_with_semis.js
+
+
+throws this error:
+
+    Error: Build file /Users/path/to/create-template/tools/build_with_semis.js
+    is malformed: SyntaxError: Unexpected token ; at Function.build.createConfig
+    (/Users/<my_user>/.nvm/versions/node/v6.5.0/lib/node_modules/requirejs/bin/r.js:14784:23)
+
+
+Running the same command in Node **v4.5.0** builds as expected.
+
+<hr>
 This web project has the following setup:
 
 * www/ - the web assets for the project
